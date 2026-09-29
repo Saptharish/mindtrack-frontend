@@ -147,7 +147,7 @@ export default function JournalPage() {
               borderRadius: 12, padding: '1.25rem' }}>
               <div style={{ fontSize: 10, color: 'var(--accent-blue)',
                 textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 8 }}>
-                Claude's Reflection
+                Claude&apos;s Reflection
               </div>
               <p style={{ color: '#8ab4d8', lineHeight: 1.75, fontSize: 14 }}>
                 {result.llm_result.reflection}

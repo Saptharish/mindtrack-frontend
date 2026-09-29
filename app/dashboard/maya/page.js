@@ -237,7 +237,7 @@ export default function MayaPage() {
         if (isActiveRef.current) {
           setTimeout(() => {
             if (isActiveRef.current && !isSpeakingRef.current) {
-              startListeningLoop()
+              startListeningLoopRef.current?.()
             }
           }, 1000)
         }
@@ -248,7 +248,7 @@ export default function MayaPage() {
         if (isActiveRef.current && !isSpeakingRef.current) {
           setTimeout(() => {
             if (isActiveRef.current && !isSpeakingRef.current) {
-              startListeningLoop()
+              startListeningLoopRef.current?.()
             }
           }, 300)
         }
@@ -260,7 +260,7 @@ export default function MayaPage() {
         console.log('Recognition start error:', e)
         isListeningRef.current = false
         setTimeout(() => {
-          if (isActiveRef.current) startListeningLoop()
+          if (isActiveRef.current) startListeningLoopRef.current?.()
         }, 500)
       }
     }, 300)
@@ -296,7 +296,7 @@ export default function MayaPage() {
         isStartingRef.current = false
         if (isActiveRef.current) startListeningLoopRef.current?.()
       })
-    } catch (err) {
+    } catch {
       isStartingRef.current = false
       const greeting = "Hey! So glad you're here. How are you feeling today?"
       setMessages([{ role: 'assistant', content: greeting }])
@@ -496,7 +496,7 @@ export default function MayaPage() {
                   borderRadius: '16px 16px 16px 4px',
                   padding: '0.75rem 1rem', fontSize: 13,
                   color: '#8888aa', lineHeight: 1.6 }}>
-                  Hi! I'm Maya 🌿 Press{' '}
+                  Hi! I&apos;m Maya 🌿 Press{' '}
                   <strong style={{ color: 'white' }}>Talk to Maya</strong>{' '}
                   to begin.
                 </div>
@@ -545,7 +545,7 @@ export default function MayaPage() {
             <div style={{ fontSize: 11, color: '#555578',
               textTransform: 'uppercase', letterSpacing: '0.1em',
               marginBottom: '0.75rem' }}>
-              Maya's memory
+              Maya&apos;s memory
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
               gap: 8, marginBottom: 10 }}>

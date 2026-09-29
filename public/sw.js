@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mindtrack-v1'
+const CACHE_NAME = 'myndara-v1'
 const STATIC_ASSETS = [
   '/',
   '/dashboard',

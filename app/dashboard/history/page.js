@@ -136,7 +136,7 @@ export default function HistoryPage() {
                         <p style={{ fontSize: 13, color: '#8888aa', margin: 0,
                           overflow: 'hidden', textOverflow: 'ellipsis',
                           whiteSpace: 'nowrap', maxWidth: '90%' }}>
-                          "{firstUser}"
+                          &quot;{firstUser}&quot;
                         </p>
                       )}
                     </div>

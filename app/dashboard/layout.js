@@ -29,6 +29,7 @@ export default function DashboardLayout({ children }) {
   }
 
   const navItems = [
+    { href: '/dashboard/checkin',   label: 'Daily Check-in', icon: '✅', desc: 'Mood, energy & stress' },
     { href: '/dashboard/maya',      label: 'Talk to Maya', icon: '💬', desc: 'Voice AI companion' },
     { href: '/dashboard/journal',   label: 'Journal',      icon: '📝', desc: 'Write your thoughts' },
     { href: '/dashboard/analytics', label: 'Analytics',    icon: '📊', desc: 'Mood trends' },
@@ -60,7 +61,7 @@ export default function DashboardLayout({ children }) {
             }}>🧠</div>
             <div>
               <div style={{ fontWeight: 700, color: 'white', fontSize: 16,
-                letterSpacing: '-0.3px' }}>MindTrack</div>
+                letterSpacing: '-0.3px' }}>Myndara</div>
               <div style={{ fontSize: 10, color: '#444466',
                 letterSpacing: '0.04em' }}>Mental Wellness Journal</div>
             </div>
@@ -121,7 +122,7 @@ export default function DashboardLayout({ children }) {
           background: 'rgba(255,255,255,0.02)', borderRadius: 10,
           border: '1px solid #1a1a35', marginBottom: '0.75rem' }}>
           <div style={{ fontSize: 10, color: '#444466', textTransform: 'uppercase',
-            letterSpacing: '0.1em', marginBottom: 8 }}>Maya's memory</div>
+            letterSpacing: '0.1em', marginBottom: 8 }}>Maya&apos;s memory</div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div style={{ fontSize: 11, color: '#666688' }}>
               {stats.memDays >= 3 ? '🧠 Fully personalized'

@@ -1,36 +1,34 @@
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'MindTrack — Mental Wellness',
+export const metadata: Metadata = {
+  title: 'Myndara — Mental Wellness',
   description: 'Your AI-powered mental wellness companion',
   manifest: '/manifest.json',
-  themeColor: '#4a9eff',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'MindTrack',
+    title: 'Myndara',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
+  icons: {
+    apple: '/icon-192.png',
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#4a9eff',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#4a9eff" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="MindTrack" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="apple-touch-icon" href="/icon-192.png" />
         <script dangerouslySetInnerHTML={{
           __html: `
             if ('serviceWorker' in navigator) {
